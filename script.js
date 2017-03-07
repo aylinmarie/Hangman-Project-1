@@ -1,6 +1,6 @@
 
 window.onload = function(){
-  // Global Variables
+  /// Global Variables ///
   var wordsAvailable = ["Denmark", "Djibouti", "Dominica", "Dominican Republic"];
 
 
@@ -8,7 +8,7 @@ window.onload = function(){
   "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
 
-  /// UI Updates ///
+  /// Letter Bank ///
 
   showLetterBank();
   function showLetterBank() {
@@ -17,17 +17,18 @@ window.onload = function(){
      }
   };
 
+
+/// Secret Word ///
+  
+  var secretWord = wordsAvailable[Math.floor(Math.random() * wordsAvailable.length)];
   randomWord();
   function randomWord() {
-      var secretWord = wordsAvailable[Math.floor(Math.random() * wordsAvailable.length)];
       $(".secret-word").text(secretWord);
   };
-    
-  displayLength();
-  function displayLength() {
-    
+
+  wordLength();
+  function wordLength() {
+
   };
-
-
-  // Click events
+  // End
 };
