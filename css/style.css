@@ -1,13 +1,25 @@
-.wrapper {
 
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: center;
+/* General CSS across all pages */
+
+body {
+	text-align: center;
 }
+
+/* HTML for index.html */
 
 .prompt {
 	text-align: center;
 }
 
+/* HTML for game.html */
+.letter-bank {
+	text-align: center;
+}
+
+.row {
+	margin: 50px;
+}
+
+.btn {
+	margin: 20px;;
+}
