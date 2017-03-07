@@ -1,15 +1,15 @@
 # Hangman
 Hangman Project for WDI9 Project #1
 
-Overview #2
+Overview
 
-Link #2
+Link
 
-Trello Board #2
+Trello Board
 
-Wireframes #2
+Wireframes
 
-Technologies #2
+Technologies
 
 
 
