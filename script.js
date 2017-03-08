@@ -5,8 +5,9 @@ window.onload = function(){
   var guessCount = 0;
   var maxGuessCount = 6;
   var placeholders = '';
-  // var letterBank = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", 
-  // "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+  var i = 0;
+  var alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", 
+  "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
   /// Guess function ///
   guessNumbers();
@@ -16,16 +17,22 @@ window.onload = function(){
   }
   };
 
+    
 
   /// Letter Bank ///
 
-  // showLetterBank();
-  // function showLetterBank() {
-  //    for (var i = 0; i < letterBank.length; i++){
-  //        $(".letter-bank").text( $(".letter-bank").text() + letterBank[i] + "   ");  
-  //    }
+  showLetterBank();
+  function showLetterBank() {
+     for (i = 0; i < alphabet.length; i++){
+          for(var j = 0; j < alphabet[i].length; j++) {
+          var keyboard = ("<input type='button' value='" + alphabet[i][j] + "'/>");
+          }
+          $("#buttons").append(keyboard); 
+        }
+        // newLetter = $(".letter-bank").text( $(".letter-bank").text() + alphabet[i] + "   "); 
+   };
 
-  // };
+
 
 
 /// Create Random Words///
@@ -50,6 +57,5 @@ window.onload = function(){
       $(".letter-bank .btn").click(function(){
           $(this).css("backgroundColor", "white"); });
   };
-
 
 };
