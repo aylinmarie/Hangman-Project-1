@@ -10,7 +10,7 @@
 <body>
 <div class="container-fluid">
 
-<div class="header"></div>
+<div class="header"><h1>Welcome to Hang Mouse!</h1></div>
 
 	<div class="row">
 
@@ -29,10 +29,11 @@
 			<div class="hangman-whisker4"></div>
 			</div>
 
-		<!-- <img src="/Users/Aylin/GA/Hangman-Project-1/images/placeholder.png" alt="Hangman img"> -->
+
 		<br>
 		<button href="#" onclick="window.location.reload(true)"; class="btn left">New Game</button>
 		<button class="btn left">Hint</button>
+		<a href="../index.html"><button class="btn left btn-warning">Home</button></a>
 		</div>
 
 		<div class="col col-md-6" id="right">
@@ -67,6 +68,11 @@
 				<button class="btn" id="X">X</button>
 				<button class="btn" id="Y">Y</button>
 				<button class="btn" id="Z">Z</button>
+
+			</div>
+
+			<div class="counter">
+				<p>Guesses Left:</p> <span id="liveCount">6</span>
 
 			</div>
 		</div>

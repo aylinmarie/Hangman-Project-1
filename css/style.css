@@ -5,10 +5,39 @@ body {
 	text-align: center;
 }
 
+h1 {
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: bold;
+}
+
+h3 {
+	text-transform: lowercase;
+
+}
+
 /* HTML for index.html */
 
-.prompt {
+.prompt, .prompt form {
 	text-align: center;
+	padding: 20px;
+}
+
+
+.prompt .btn {
+	margin: 30px;
+	background-color: orange;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: 800;
+	letter-spacing: .1em;
+}
+
+.wrap1 {
+	margin: 150px 300px 0px 300px;
+	min-width: 300px;
+
 }
 
 /* HTML for game.html */
@@ -16,14 +45,21 @@ body {
 	text-align: center;
 }
 
+.header {
+	margin: 70px;
+}
+
 .row {
 	margin: 50px;
 }
-/*.col {
-	border: 1px solid black;
-}*/
+
 .btn {
-	margin: 5px;;
+	margin: 5px;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: 800;
+	letter-spacing: .1em;
+
 }
 
 button.left {
@@ -31,8 +67,22 @@ button.left {
 }
 
 .secret-word {
-	margin-bottom: 150px;
-	margin-top: 30px;
+	margin-bottom: 70px;
+	margin-top: 100px;
+	font-size: 50px;
+}
+
+.counter {
+	margin: 30px;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	display: inline-block;
+}
+
+.counter span {
+	color: orange;
 }
 
 
@@ -48,7 +98,7 @@ button.left {
 	width: 200px;
 	height: 200px;
 	border-radius: 50%;
-	background-color: #FFA500;
+	background-color: grey;
 	margin: 100px 0px 0px 200px;
 }
 
@@ -62,7 +112,7 @@ button.left {
 	width: 75px;
 	height: 75px;
 	border-radius: 50%;
-	background-color: #FFA500;
+	background-color: grey;
 	margin: -220px 0px 0px 325px;
 }
 
@@ -70,7 +120,7 @@ button.left {
 	width: 75px;
 	height: 75px;
 	border-radius: 50%;
-	background-color: #FFA500;
+	background-color: grey;
 	margin: -220px 0px 0px 200px;
 }
 

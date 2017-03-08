@@ -1,35 +1,45 @@
 
 window.onload = function(){
   /// Global Variables ///
-  var wordsAvailable = ["Four", "See", "Eighteen", "Dominican Republic"];
-  var guessCount = 0;
-  var maxGuessCount = 6;
+  var wordsAvailable = ["FOUR", "SEE", "MATTHEW"];
+  var counter = document.getElementById("liveCount");
+  var guessCount = 6;
   var secretWord = "";
-  var answerWordAsArray = "";
+  var answerWordAsArray = [];
   var placeholders = [];
-  var clickLetter = "";
   var ourWord = [];
-  var alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", 
-  "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+  var i = "";
+  var k = "";
+  var holderArray = [];
+  var guess = "";
+  // var alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", 
+  // "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
   /// Create Random Words///
   
     secretWord = wordsAvailable[Math.floor(Math.random() * wordsAvailable.length)];
+    blankSpace = placeholders.push("_ ");
     for (var i = 0; i < secretWord.length; i++) {
       ourWord.push(secretWord[i]);
       placeholders.push("_ "); }
-    $(".secret-word").append(placeholders);
+      $(".secret-word").append(placeholders);
     
   /// Letter Bank ///
+ 
+    var clickLetter = $(".letter-bank .btn").click(function(){
 
-    clickLetter = $(".letter-bank .btn").click(function(){
             $(this).css("backgroundColor", "white");
-            var thisLetter = this.innerHTML; 
-            for (var i = 0; i < ourWord.length; i++) {
-              if (thisLetter === ourWord[i]) {
-                console.log("you're right");
-              } else { console.log("wrong");}
+            var guess = this.innerHTML; 
+            for (var k = 0; k < ourWord.length; k++) { 
+              if (guess === ourWord[k]) {
+                console.log(holderArray.push(ourWord[k]));
+              } else if (guess !== ourWord[k]) {
+                holderArray.push(" ");
+                counter.innerHTML = guessCount = guessCount - 1;
+              } else { placeholders = holderArray; }
+
              }  
+             console.log(holderArray);
     });
 
 
@@ -45,16 +55,7 @@ window.onload = function(){
   //  };
 
 
-  /// Guess function ///
-
-
-  guessNumbers();
-  function guessNumbers() {
-      if (guessCount >= maxGuessCount) {
-      alert("Sorry, you ran out of guesses. The answer was " + secretWord + ".");
-  }
-  };
-
+  /// Hang Mouse ///
 
 
 
