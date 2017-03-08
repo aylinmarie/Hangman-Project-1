@@ -4,6 +4,7 @@ window.onload = function(){
   var wordsAvailable = ["FOUR", "SEE", "FUDGE", "MATTHEW"];
   var counter = document.getElementById("liveCount");
   var guessCount = 6;
+  var lives;
   var secretWord = "";
   var answerWordAsArray = [];
   var placeholders = [];
@@ -30,24 +31,23 @@ window.onload = function(){
   /// Letter Bank ///
  
     var clickLetter = $(".letter-bank .btn").click(function(){
-
+            
             $(this).hide();
             var guess = this.innerHTML; 
             for (var k = 0; k < secretWord.length; k++) { 
               if (guess === secretWord[k]) {
                 placeholders[k] = guess; } }
-
-
-           //   } else if (guess !== secretWord[k]) { 
-           //      $( ".hangman" ).hide(); };
-           // }
-
               $(".secret-word").text(placeholders.join(" "));
 
     });
 
-  /// Create Name ///
-
+  /// Lives Left ///
+     
+        lives = 6;
+        $(".letter-bank .btn").click(function() { 
+            lives -= 1;
+            $("#liveCount").text(lives);
+          })
 
   /// Hang Mouse ///
 
