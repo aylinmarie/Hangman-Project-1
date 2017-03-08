@@ -4,24 +4,35 @@ window.onload = function(){
   var wordsAvailable = ["Four", "See", "Eighteen", "Dominican Republic"];
   var guessCount = 0;
   var maxGuessCount = 6;
-  var placeholders = '';
+  var secretWord = "";
+  var answerWordAsArray = "";
+  var placeholders = [];
+  var clickLetter = "";
+  var ourWord = [];
   var alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", 
   "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
-  /// Guess function ///
-  guessNumbers();
-  function guessNumbers() {
-      if (guessCount >= maxGuessCount) {
-      alert("Sorry, you ran out of guesses. The answer was " + secretWord + ".");
-  }
-  };
-
+  /// Create Random Words///
+  
+    secretWord = wordsAvailable[Math.floor(Math.random() * wordsAvailable.length)];
+    for (var i = 0; i < secretWord.length; i++) {
+      ourWord.push(secretWord[i]);
+      placeholders.push("_ "); }
+    $(".secret-word").append(placeholders);
     
   /// Letter Bank ///
 
-    for (var k = 0; k < alphabet.length; k++) {
-      console.log("hey the alphabet works");
-  }
+    clickLetter = $(".letter-bank .btn").click(function(){
+            $(this).css("backgroundColor", "white");
+            var thisLetter = this.innerHTML; 
+            for (var i = 0; i < ourWord.length; i++) {
+              if (thisLetter === ourWord[i]) {
+                console.log("you're right");
+              } else { console.log("wrong");}
+             }  
+    });
+
+
 
   // showLetterBank();
   // function showLetterBank() {
@@ -34,32 +45,21 @@ window.onload = function(){
   //  };
 
 
+  /// Guess function ///
 
 
-/// Create Random Words///
-  
-  var secretWord = wordsAvailable[Math.floor(Math.random() * wordsAvailable.length)];
-
-
-  randomWord();
-    function randomWord() {
-      $(".secret-word").text(secretWord);
-    };
-
-/// Create blank spaces ///
-
-  for (var j = 0; j < secretWord.length; j++) {
-      $("#secret").text((placeholders += '_ '));
+  guessNumbers();
+  function guessNumbers() {
+      if (guessCount >= maxGuessCount) {
+      alert("Sorry, you ran out of guesses. The answer was " + secretWord + ".");
+  }
   };
+
+
 
 
   // Click functions
 
-  selectLetter();
-  function selectLetter() {
-      var clickLetter = $(".letter-bank .btn").click(function(){
-          $(this).css("backgroundColor", "white"); });
-  };
 
 
 };
