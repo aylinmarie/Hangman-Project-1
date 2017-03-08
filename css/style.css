@@ -21,5 +21,14 @@ body {
 }
 
 .btn {
-	margin: 20px;;
+	margin: 5px;;
+}
+
+button.left {
+	margin-top: 30px;
+}
+
+.secret-word {
+	margin-bottom: 150px;
+	margin-top: 30px;
 }
