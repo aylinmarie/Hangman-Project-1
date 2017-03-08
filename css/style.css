@@ -12,9 +12,13 @@ h1 {
 	font-weight: bold;
 }
 
-h3 {
-	text-transform: lowercase;
+p, h2, label, h3 {
+	font-family: 'Quicksand', sans-serif;
 
+}
+
+h3, label {
+	text-transform: lowercase;
 }
 
 /* HTML for index.html */
@@ -30,7 +34,7 @@ h3 {
 	background-color: orange;
 	text-transform: uppercase;
 	font-size: 12px;
-	font-weight: 800;
+	font-weight: bold;
 	letter-spacing: .1em;
 }
 
@@ -39,6 +43,7 @@ h3 {
 	min-width: 300px;
 
 }
+
 
 /* HTML for game.html */
 .letter-bank {
@@ -70,6 +75,9 @@ button.left {
 	margin-bottom: 70px;
 	margin-top: 100px;
 	font-size: 50px;
+	font-weight: 700;
+	color: orange;
+	font-family: 'Quicksand', sans-serif;
 }
 
 .counter {
@@ -85,13 +93,18 @@ button.left {
 	color: orange;
 }
 
+.buttom-hangman {
+	display: inline;
+}
+
 
 /* Hangman Image */
 
 .hangman {
-	width: 200px;
-	height: 200px;
+	width: 250px;
+	height: 250px;
 	position: relative;
+	margin-left: 15px;
 }
 
 .hangman-head {
