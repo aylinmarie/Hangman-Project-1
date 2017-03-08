@@ -5,15 +5,32 @@
 
 <link rel="stylesheet" type="text/css" href="../css/style.css">
 
-<title>Hangman | WDI9 Project #1</title>
+<title>Hang Mouse | WDI9 Project #1</title>
 </head>
 <body>
 <div class="container-fluid">
 
+<div class="header"></div>
+
 	<div class="row">
 
 		<div class="col col-md-6" id="left">
-		<img src="/Users/Aylin/GA/Hangman-Project-1/images/placeholder.png" alt="Hangman img"><br>
+
+			<div class="hangman"> 
+			<div class="hangman-head"></div>
+			<div class="hangman-ear1"></div>
+			<div class="hangman-ear2"></div>
+			<div class="hangman-eye1"></div>
+			<div class="hangman-eye2"></div>
+			<div class="hangman-mouth"></div>
+			<div class="hangman-whisker1"></div>
+			<div class="hangman-whisker2"></div>
+			<div class="hangman-whisker3"></div>
+			<div class="hangman-whisker4"></div>
+			</div>
+
+		<!-- <img src="/Users/Aylin/GA/Hangman-Project-1/images/placeholder.png" alt="Hangman img"> -->
+		<br>
 		<button href="#" onclick="window.location.reload(true)"; class="btn left">New Game</button>
 		<button class="btn left">Hint</button>
 		</div>
@@ -24,7 +41,7 @@
 			</div>
 
 			<div class="letter-bank buttons" id="buttons">
-				<!-- <button class="btn" id="a">A</button>
+				<button class="btn">A</button>
 				<button class="btn">B</button>
 				<button class="btn">C</button>
 				<button class="btn">D</button>
@@ -50,7 +67,7 @@
 				<button class="btn">X</button>
 				<button class="btn">Y</button>
 				<button class="btn">Z</button>
- -->
+
 			</div>
 		</div>
 

@@ -5,7 +5,6 @@ window.onload = function(){
   var guessCount = 0;
   var maxGuessCount = 6;
   var placeholders = '';
-  var i = 0;
   var alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", 
   "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
@@ -18,19 +17,21 @@ window.onload = function(){
   };
 
     
-
   /// Letter Bank ///
 
-  showLetterBank();
-  function showLetterBank() {
-     for (i = 0; i < alphabet.length; i++){
-          for(var j = 0; j < alphabet[i].length; j++) {
-          var keyboard = ("<input type='button' value='" + alphabet[i][j] + "'/>");
-          }
-          $("#buttons").append(keyboard); 
-        }
-        // newLetter = $(".letter-bank").text( $(".letter-bank").text() + alphabet[i] + "   "); 
-   };
+    for (var k = 0; k < alphabet.length; k++) {
+      console.log("hey the alphabet works");
+  }
+
+  // showLetterBank();
+  // function showLetterBank() {
+  //    for (i = 0; i < alphabet.length; i++){
+  //         for(var j = 0; j < alphabet[i].length; j++) {
+  //         var keyboard = ("<input type='button' value='" + alphabet[i][j] + "'/>");
+  //         }
+  //         $("#buttons").append(keyboard); 
+  //       }
+  //  };
 
 
 
@@ -38,6 +39,7 @@ window.onload = function(){
 /// Create Random Words///
   
   var secretWord = wordsAvailable[Math.floor(Math.random() * wordsAvailable.length)];
+
 
   randomWord();
     function randomWord() {
@@ -48,14 +50,16 @@ window.onload = function(){
 
   for (var j = 0; j < secretWord.length; j++) {
       $("#secret").text((placeholders += '_ '));
-  }
+  };
 
 
   // Click functions
+
   selectLetter();
   function selectLetter() {
-      $(".letter-bank .btn").click(function(){
+      var clickLetter = $(".letter-bank .btn").click(function(){
           $(this).css("backgroundColor", "white"); });
   };
+
 
 };
