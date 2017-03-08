@@ -34,7 +34,8 @@ window.onload = function(){
             for (var k = 0; k < secretWord.length; k++) { 
               if (guess === secretWord[k]) {
                 // console.log(holderArray.push(ourWord[k]));
-                holderArray[k] = guess;
+                // holderArray[k] = guess;
+                placeholders[k] = guess;
 
               // } else if (guess !== ourWord[k]) {
               //   holderArray.push(" ");
@@ -45,7 +46,7 @@ window.onload = function(){
            }
              // holderArray.push(" ");  
 
-              $(".secret-word").text(holderArray.join(" "));
+              $(".secret-word").text(placeholders.join(" "));
     
              // console.log(ourWord);
     });
