@@ -1,7 +1,7 @@
 
 window.onload = function(){
   /// Global Variables ///
-  var wordsAvailable = ["FOUR", "SEE", "MATTHEW"];
+  var wordsAvailable = ["FOUR", "SEE", "FUDGE", "MATTHEW"];
   var counter = document.getElementById("liveCount");
   var guessCount = 6;
   var secretWord = "";
@@ -17,8 +17,9 @@ window.onload = function(){
 
   /// Create Random Words///
   
+
     secretWord = wordsAvailable[Math.floor(Math.random() * wordsAvailable.length)];
-    blankSpace = placeholders.push("_ ");
+    alert("the secret word is " + secretWord);
     for (var i = 0; i < secretWord.length; i++) {
       ourWord.push(secretWord[i]);
       placeholders.push("_ "); }
@@ -30,16 +31,23 @@ window.onload = function(){
 
             $(this).css("backgroundColor", "white");
             var guess = this.innerHTML; 
-            for (var k = 0; k < ourWord.length; k++) { 
-              if (guess === ourWord[k]) {
-                console.log(holderArray.push(ourWord[k]));
-              } else if (guess !== ourWord[k]) {
-                holderArray.push(" ");
-                counter.innerHTML = guessCount = guessCount - 1;
-              } else { placeholders = holderArray; }
+            for (var k = 0; k < secretWord.length; k++) { 
+              if (guess === secretWord[k]) {
+                // console.log(holderArray.push(ourWord[k]));
+                holderArray[k] = guess;
 
-             }  
-             console.log(holderArray);
+              // } else if (guess !== ourWord[k]) {
+              //   holderArray.push(" ");
+              //   counter.innerHTML = guessCount -= 1;
+              // } else { placeholders = holderArray; }
+
+             }
+           }
+             // holderArray.push(" ");  
+
+              $(".secret-word").text(holderArray.join(" "));
+    
+             // console.log(ourWord);
     });
 
 
