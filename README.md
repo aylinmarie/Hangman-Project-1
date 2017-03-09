@@ -25,5 +25,9 @@ Hangman the Mouse! The Hangmouse game displays a secret word as a list of hidden
 * Bootsrap
 * w3 Schools CSS
 
+## Future Developments
 
-
+* Update CSS image to show as incorrect letters are clicked
+* Make CSS image responsive
+* Add floating cheese in the background of landing page
+* Create hint button showing region of cheeses
