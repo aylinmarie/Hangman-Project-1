@@ -85,11 +85,14 @@ window.onload = function(){
       nextMousePiece += 1;
       }
 
-      $(".letter-bank .btn").click(drawMouse); 
-
-
-  /// Display Name ///
-            // var fname = document.getElementById("firstName").value;
-            //  console.log(fname);
-            //  $(".header h1").innerHTML("Welcome, " + fname + "!");         
+      $(".letter-bank .btn").click( function() {
+        var guess = this.innerHTML; 
+            for (var k = 0; k < secretWord.length; k++) { 
+              if (guess === secretWord[k]) {
+                placeholders[k] = guess;
+        } }
+            if (placeholders[k] != guess) {
+              drawMouse(); 
+            } 
+      });      
 };
