@@ -13,7 +13,7 @@ window.onload = function(){
   var ourWord = [];
   var holderArray = [];
   var guess = "";
-  
+
 
   /// Create Random Words///
   
@@ -36,8 +36,10 @@ window.onload = function(){
               $(".secret-word").text(placeholders.join(" "));
               if (placeholders.indexOf("_ ") === -1)  {
                 alert("You won! You're so cheesy :)");
-                window.location.reload(true);
-              }
+                setTimeout(function() {
+                  window.location.reload(true);
+                },"1500");  
+            };
     });
 
 
@@ -47,7 +49,10 @@ window.onload = function(){
             lives -= 1;
             if (lives === 0) {
               alert("Game Over! I guess you don't really know your cheeses :(");
-              window.location.reload(true); 
+              $(".secret-word").text(secretWord);
+              setTimeout(function() {
+                window.location.reload(true);
+              },"1500");  
             };
             $("#liveCount").text(lives);
           });
