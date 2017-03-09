@@ -11,8 +11,7 @@ Hangmouse Trello Link: https://trello.com/b/iEa7CHlb/hangman-project-1
 
 ## Wireframes
 ### Initial Sketches
-Inline-style: 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![alt text](https://github.com/aylinmarie/Hangman-Project-1/blob/master/images/sketch.JPG "Paper Sketch")
 
 ### Formal Wireframe
 
