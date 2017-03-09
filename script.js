@@ -5,7 +5,8 @@ window.onload = function(){
   /// Global Variables ///
 
   var wordsAvailable = ["CHEDDAR", "AMERICAN", "MUENSTER", "SWISS", "BRIE",
-  "GOUDA", "KASAR", "FETA", "GOAT", "QUESO", "COTIJA"];
+  "GOUDA", "KASAR", "FETA", "GOAT", "QUESO", "COTIJA", "PARMESAN",
+  "MOZZARELLA"];
   var lives = 6;
   var secretWord = "";
   var placeholders = [];
@@ -16,7 +17,6 @@ window.onload = function(){
   /// Create Random Words///
   
     secretWord = wordsAvailable[Math.floor(Math.random() * wordsAvailable.length)];
-    // alert("the secret word is " + secretWord);
     for (var i = 0; i < secretWord.length; i++) {
       ourWord.push(secretWord[i]);
       placeholders.push("_ "); }
@@ -35,24 +35,24 @@ window.onload = function(){
               $(".secret-word").text(placeholders.join(" "));
     });
 
-        // $(".letter-bank .btn").click(function() { 
-        //     if (secretWord.length == secretWord) {
-        //       alert("You won!");
-        //       window.location.reload(true); 
-        //     } 
-        //   });
 
   /// Lives Left ///
      
         $(".letter-bank .btn").click(function() { 
             lives -= 1;
             if (lives === 0) {
-              alert("Sorry! I guess you don't really know your cheeses :(");
+              alert("Game Over! I guess you don't really know your cheeses :(");
               window.location.reload(true); 
-            } 
+            };
             $("#liveCount").text(lives);
           });
 
+        // $(".letter-bank .btn").click(function() { 
+        //     if (placeholders.length === guess.length) {
+        //       alert("You won!");
+        //       window.location.reload(true); 
+        //     };
+        //   });
 
   /// Hang Mouse ///
 

@@ -5,6 +5,21 @@ body {
 	text-align: center;
 }
 
+.btn:hover {
+	background-color: #ffffff;
+	color: orange;
+	border: 1px solid orange;
+}
+
+p a {
+	color: orange;
+}
+
+p a:hover {
+	color: grey;
+	text-decoration: none;
+}
+
 h1 {
 	text-transform: uppercase;
 	letter-spacing: .1em;
@@ -21,12 +36,20 @@ h3, label {
 	text-transform: lowercase;
 }
 
+footer {
+	margin-top: 50px;
+	font-size: 12px;
+}
+
 /* HTML for index.html */
+
+.cheese {
+	padding: 20px;
+}
 
 .prompt, .prompt form {
 	text-align: center;
 }
-
 
 .prompt .btn {
 	margin: 30px;
@@ -37,18 +60,17 @@ h3, label {
 	letter-spacing: .1em;
 }
 
-.prompt .btn:hover {
-	color: #000000;
-	background-color: #fff;
-}
-
 
 .w3-input {
 	background-color: #fff6e5;
+	text-align: center;
 }
 
+
 .wrap1 {
-	padding-top:200px;
+	padding-top:120px;
+	padding-left: 400px;
+	padding-right: 400px;
 	min-width: 300px;
 	background-color: #fff6e5;
 	height: 800px;
@@ -62,7 +84,7 @@ h3, label {
 }
 
 .header {
-	margin: 70px;
+	margin: 30px;
 }
 
 p span {
@@ -73,7 +95,7 @@ p span {
 }
 
 .row {
-	margin: 50px;
+	margin: 0px 50px 0px 50px;
 }
 
 .btn {
@@ -82,16 +104,13 @@ p span {
 	font-size: 12px;
 	font-weight: 800;
 	letter-spacing: .1em;
+	color: #000000;
 
-}
-
-button.left {
-	margin-top: 30px;
 }
 
 .secret-word {
-	margin-bottom: 70px;
-	margin-top: 100px;
+	margin-bottom: 50px;
+	margin-top: 30px;
 	font-size: 50px;
 	font-weight: 700;
 	color: orange;
@@ -111,9 +130,10 @@ button.left {
 	color: orange;
 }
 
-.buttom-hangman {
-	display: inline;
+.button-row {
+	display: inline-block;
 }
+
 
 
 /* Hangman Image */
