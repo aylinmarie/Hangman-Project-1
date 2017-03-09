@@ -35,13 +35,19 @@ window.onload = function(){
               $(".secret-word").text(placeholders.join(" "));
     });
 
+        // $(".letter-bank .btn").click(function() { 
+        //     if (secretWord.length == secretWord) {
+        //       alert("You won!");
+        //       window.location.reload(true); 
+        //     } 
+        //   });
 
   /// Lives Left ///
      
         $(".letter-bank .btn").click(function() { 
             lives -= 1;
             if (lives === 0) {
-              alert("Sorry! No more tries.");
+              alert("Sorry! I guess you don't really know your cheeses :(");
               window.location.reload(true); 
             } 
             $("#liveCount").text(lives);
