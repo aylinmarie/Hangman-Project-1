@@ -11,7 +11,7 @@ Hangmouse Trello Link: https://trello.com/b/iEa7CHlb/hangman-project-1
 
 ## Wireframes
 ### Initial Sketches
-![alt text](https://github.com/aylinmarie/Hangman-Project-1/blob/master/images/sketch.JPG "Paper Sketch" portrait=yes)
+![image](https://github.com/aylinmarie/Hangman-Project-1/blob/master/images/sketch.JPG "Paper Sketch" portrait=yes)
 
 ### Formal Wireframe
 
