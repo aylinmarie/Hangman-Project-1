@@ -38,6 +38,7 @@ window.onload = function(){
 
               if (placeholders.indexOf("_ ") === -1)  {
                 alert("You won! You're so cheesy :)");
+                $(".hangman-whisker4, .hangman-whisker3, .hangman-whisker2, .hangman-whisker1, .hangman-ear1, .hangman-ear2, .hangman-eye1, .hangman-eye2, .hangman-mouth").css("visibility", 'visible');
                 setTimeout(function() {
                   window.location.reload(true);
                 },"1500");  
@@ -52,6 +53,7 @@ window.onload = function(){
             if (lives === 0) {
               alert("Game Over! I guess you don't really know your cheeses :(");
               $(".secret-word").text(secretWord);
+              $(".hangman-whisker4, .hangman-whisker3, .hangman-whisker2, .hangman-whisker1, .hangman-ear1, .hangman-ear2, .hangman-eye1, .hangman-eye2, .hangman-mouth").css("visibility", 'visible');
               setTimeout(function() {
                 window.location.reload(true);
               },"1500");  
