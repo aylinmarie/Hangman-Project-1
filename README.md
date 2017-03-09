@@ -2,12 +2,20 @@
 Hangman Project for WDI9 Project #1
 
 ## Overview
+Hangman the Mouse! The Hangmouse game displays a secret word as a list of hidden letters (hint: they're cheesy). You will have 6 guesses to figure out the word. Use the alphabet board to guess each letter. If you incorrectly guess a letter, you will lose a guess! If you guess correctly, don't worry you are in the clear. If you guess all of the letters you win!
 
 ## Link
 
 ## Trello Board
+Hangmouse Trello Link: https://trello.com/b/iEa7CHlb/hangman-project-1
 
 ## Wireframes
+### Initial Sketches
+Inline-style: 
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
+### Formal Wireframe
+
 
 ## Technologies 
 * Languages - HTML, CSS, Javascript, JQuery
@@ -15,7 +23,7 @@ Hangman Project for WDI9 Project #1
 * Project Planning + User Stories - Trello
 * Sublime Text 3
 * Bootsrap
-
+* W3 
 
 
 
