@@ -25,22 +25,33 @@ h3, label {
 
 .prompt, .prompt form {
 	text-align: center;
-	padding: 20px;
 }
 
 
 .prompt .btn {
 	margin: 30px;
-	background-color: orange;
+	background-color: #ccc;
 	text-transform: uppercase;
 	font-size: 12px;
 	font-weight: bold;
 	letter-spacing: .1em;
 }
 
+.prompt .btn:hover {
+	color: #000000;
+	background-color: #fff;
+}
+
+
+.w3-input {
+	background-color: #fff6e5;
+}
+
 .wrap1 {
-	margin: 150px 300px 0px 300px;
+	padding-top:200px;
 	min-width: 300px;
+	background-color: #fff6e5;
+	height: 800px;
 
 }
 
