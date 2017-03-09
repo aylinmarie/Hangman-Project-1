@@ -54,6 +54,13 @@ h3, label {
 	margin: 70px;
 }
 
+p span {
+	text-transform: uppercase;
+	font-weight: bold;
+	color: orange;
+	letter-spacing: .1em;
+}
+
 .row {
 	margin: 50px;
 }

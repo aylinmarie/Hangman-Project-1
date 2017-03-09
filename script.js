@@ -1,7 +1,8 @@
 
 window.onload = function(){
   /// Global Variables ///
-  var wordsAvailable = ["FOUR", "SEE", "FUDGE", "MATTHEW"];
+  var wordsAvailable = ["CHEDDAR", "AMERICAN", "MUENSTER", "SWISS", "BRIE",
+  "GOUDA", "KASAR", "FETA", "GOAT", "QUESO", "COTIJA"];
   var counter = document.getElementById("liveCount");
   var guessCount = 6;
   var lives;
@@ -47,6 +48,10 @@ window.onload = function(){
         $(".letter-bank .btn").click(function() { 
             lives -= 1;
             $("#liveCount").text(lives);
+            if (lives <= 0) {
+              alert("Sorry! No more tries.");
+              window.location.reload(true);
+            }
           })
 
   /// Hang Mouse ///
