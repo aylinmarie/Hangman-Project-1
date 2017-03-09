@@ -13,6 +13,7 @@ window.onload = function(){
   var ourWord = [];
   var holderArray = [];
   var guess = "";
+  
 
   /// Create Random Words///
   
@@ -33,6 +34,10 @@ window.onload = function(){
                 placeholders[k] = guess;
                 lives += 1; } }
               $(".secret-word").text(placeholders.join(" "));
+              if (placeholders.indexOf("_ ") === -1)  {
+                alert("You won! You're so cheesy :)");
+                window.location.reload(true);
+              }
     });
 
 
@@ -46,15 +51,6 @@ window.onload = function(){
             };
             $("#liveCount").text(lives);
           });
-
-        // $(".letter-bank .btn").click(function() { 
-        //     if (placeholders.length === guess.length) {
-        //       alert("You won!");
-        //       window.location.reload(true); 
-        //     };
-        //   });
-
-  /// Hang Mouse ///
 
 
 };
