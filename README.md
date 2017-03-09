@@ -12,10 +12,14 @@ Hangman the Mouse! The Hangmouse game displays a secret word as a list of hidden
 
 ## Wireframes
 ### Initial Sketches
-![Paper Sketch](https://github.com/aylinmarie/Hangman-Project-1/blob/master/images/sketch.JPG)
+![Paper Sketch](https://github.com/aylinmarie/Hangman-Project-1/blob/master/images/sketch.JPG "paper sketch")
 
-### Formal Wireframe
+### Sketch Wireframe
+![Landing Page](https://github.com/aylinmarie/Hangman-Project-1/blob/master/images/Landing%20Page.png "Landing page")
 
+![Game Page](https://github.com/aylinmarie/Hangman-Project-1/blob/master/images/Game%20Page.png "Game page")
+
+![Alert Page](https://github.com/aylinmarie/Hangman-Project-1/blob/master/images/Alert%20Page.png "Alert page")
 
 ## Technologies 
 * Languages - HTML, CSS, Javascript, JQuery
