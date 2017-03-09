@@ -12,7 +12,7 @@ Hangman the Mouse! The Hangmouse game displays a secret word as a list of hidden
 
 ## Wireframes
 ### Initial Sketches
-![Paper Sketch](https://github.com/aylinmarie/Hangman-Project-1/blob/master/images/sketch.JPG "paper sketch")
+![Paper Sketch](https://github.com/aylinmarie/Hangman-Project-1/blob/master/images/Sketch%20copy.JPG "paper sketch")
 
 ### Sketch Wireframe
 ![Landing Page](https://github.com/aylinmarie/Hangman-Project-1/blob/master/images/Landing%20Page.png "Landing page")
