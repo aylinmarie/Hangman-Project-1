@@ -20,7 +20,8 @@ window.onload = function(){
     secretWord = wordsAvailable[Math.floor(Math.random() * wordsAvailable.length)];
     for (var i = 0; i < secretWord.length; i++) {
       ourWord.push(secretWord[i]);
-      placeholders.push("_ "); }
+      placeholders.push("_ ");       
+    }
       $(".secret-word").append(placeholders);
     
 
@@ -34,6 +35,7 @@ window.onload = function(){
                 placeholders[k] = guess;
                 lives += 1; } }
               $(".secret-word").text(placeholders.join(" "));
+
               if (placeholders.indexOf("_ ") === -1)  {
                 alert("You won! You're so cheesy :)");
                 setTimeout(function() {
@@ -57,9 +59,37 @@ window.onload = function(){
             $("#liveCount").text(lives);
           });
 
+
+  /// Hangmouse Image ///
+
+  $(".hangman-whisker4, .hangman-whisker3, .hangman-whisker2, .hangman-whisker1, .hangman-ear1, .hangman-ear2, .hangman-eye1, .hangman-eye2, .hangman-mouth").css("visibility", "hidden");
+
+  function a() {
+    $(".hangman-mouth").css("visibility", 'visible');};
+  function b() {
+    $(".hangman-ear1").css("visibility", 'visible');};
+  function c() {
+    $(".hangman-ear2").css("visibility", 'visible');};
+  function d() {
+    $(".hangman-eye1, .hangman-eye2").css("visibility", 'visible');};
+  function e() {
+    $(".hangman-whisker4, .hangman-whisker3, .hangman-whisker2, .hangman-whisker1").css("visibility", 'visible');};
+  function f() {
+    $(".hangman-whisker2, .hangman-whisker1").css("visibility", 'visible');};
+
+      var mouseFunctions = [a, b, c, d, e, f];
+      var nextMousePiece = 0;
+
+      function drawMouse() {
+      mouseFunctions[nextMousePiece]();
+      nextMousePiece += 1;
+      }
+
+      $(".letter-bank .btn").click(drawMouse); 
+
+
   /// Display Name ///
-          // var fname = document.myform.fname.val;
-          // $(".prompt .btn").click(function() {
-          //    $(".header h1").innerHTML("Welcome, " + fname + "!");         
-          // });
+            // var fname = document.getElementById("firstName").value;
+            //  console.log(fname);
+            //  $(".header h1").innerHTML("Welcome, " + fname + "!");         
 };
