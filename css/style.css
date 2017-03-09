@@ -131,7 +131,8 @@ p span {
 }
 
 .button-row {
-	display: inline-block;
+	display: block;
+	text-align: right;
 }
 
 
