@@ -57,5 +57,9 @@ window.onload = function(){
             $("#liveCount").text(lives);
           });
 
-
+  /// Display Name ///
+          // var fname = document.myform.fname.val;
+          // $(".prompt .btn").click(function() {
+          //    $(".header h1").innerHTML("Welcome, " + fname + "!");         
+          // });
 };
