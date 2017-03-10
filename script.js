@@ -14,7 +14,7 @@ window.onload = function() {
   var guess = "";
 
 
-  /// Create Random Words///
+  /// Create Random Words and Push to Show Underscores///
 
   secretWord = wordsAvailable[Math.floor(Math.random() * wordsAvailable.length)];
   for (var i = 0; i < secretWord.length; i++) {
@@ -24,7 +24,7 @@ window.onload = function() {
   $(".secret-word").append(placeholders);
 
 
-  /// Letter Bank Click///
+  /// Letter Bank - Show Word if Guessed Letter Equals Secret Letter///
 
   var clickLetter = $(".letter-bank .btn").click(function() {
     $(this).hide();
@@ -37,17 +37,19 @@ window.onload = function() {
     }
     $(".secret-word").text(placeholders.join(" "));
 
+  /// You Won Alert Once all letters are Guessed ///
+
     if (placeholders.indexOf("_ ") === -1) {
       alert("You won! You're so cheesy :)");
       $(".hangman-whisker4, .hangman-whisker3, .hangman-whisker2, .hangman-whisker1, .hangman-ear1, .hangman-ear2, .hangman-eye1, .hangman-eye2, .hangman-mouth").css("visibility", 'visible');
       setTimeout(function() {
         window.location.reload(true);
-      }, "1500");
+      }, "1000");
     };
   });
 
 
-  /// Lives Left ///
+  /// Lives Left - Alert you lost if all 6 guesses are used ///
 
   $(".letter-bank .btn").click(function() {
     lives -= 1;
@@ -57,13 +59,13 @@ window.onload = function() {
       $(".hangman-whisker4, .hangman-whisker3, .hangman-whisker2, .hangman-whisker1, .hangman-ear1, .hangman-ear2, .hangman-eye1, .hangman-eye2, .hangman-mouth").css("visibility", 'visible');
       setTimeout(function() {
         window.location.reload(true);
-      }, "1500");
+      }, "1000");
     };
     $("#liveCount").text(lives);
   });
 
 
-  /// Hangmouse Image ///
+  /// Hangmouse Image - show on each click ///
 
   $(".hangman-whisker4, .hangman-whisker3, .hangman-whisker2, .hangman-whisker1, .hangman-ear1, .hangman-ear2, .hangman-eye1, .hangman-eye2, .hangman-mouth").css("visibility", "hidden");
 
@@ -106,7 +108,7 @@ window.onload = function() {
         placeholders[k] = guess;
       }
     }
-    if (placeholders[k] != guess) {
+    if (placeholders[k] !== guess) {
       drawMouse();
     }
   });
