@@ -84,7 +84,7 @@ window.onload = function() {
   };
 
   function e() {
-    $(".hangman-whisker4, .hangman-whisker3, .hangman-whisker2, .hangman-whisker1").css("visibility", 'visible');
+    $(".hangman-whisker4, .hangman-whisker3").css("visibility", 'visible');
   };
 
   function f() {
